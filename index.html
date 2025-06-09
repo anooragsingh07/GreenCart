@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCart - Sustainable Shopping Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo"><span class="logo-green">Green</span><span class="logo-cart">Cart</span></div>
+        <ul class="navbar-menu">
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#sustainability-tips">Tips</a></li>
+            <li><a href="#brand-scoreboard">Scoreboard</a></li>
+            <li><a href="#store-directory">Directory</a></li>
+            <li><a href="#green-pledge">Pledge</a></li>
+        </ul>
+        <a href="#green-pledge" class="cta-btn">Green Pledge</a>
+    </nav>
+    <header class="hero-section">
+        <h1>GreenCart</h1>
+        <p class="hero-tagline">Empowering Sustainable Shopping Choices</p>
+        <div class="hero-theme">Theme: <span class="theme-highlight">Eco-Friendly Retail</span></div>
+        <a href="#green-pledge" class="hero-cta-btn">Take the Green Pledge</a>
+    </header>
+    <section id="about" class="dashboard-card animate-fade-in">
+        <div class="dashboard-icon"><i class="fas fa-info-circle"></i></div>
+        <h2>About GreenCart</h2>
+        <p>The main problem we are solving is the lack of accessible and clear information about sustainable retail choices for everyday consumers. Many shoppers want to make eco-friendly and responsible purchasing decisions but struggle to find trustworthy details about product origins, environmental impacts, and the sustainability practices of different brands. This information gap leads to uninformed purchases that can contribute to waste, pollution, and unethical supply chains.</p>
+        <p>This problem occurs primarily in online and physical retail environments worldwide, especially as consumers become more aware of environmental issues but are overwhelmed by complex or scattered data. Without a simple, easy-to-understand resource that educates and guides them, consumers often default to convenience or price rather than sustainability. This gap limits the positive impact that conscious consumer behavior can have on reducing waste, lowering carbon footprints, and supporting ethical production practices.</p>
+    </section>
+    <main>
+        <div class="dashboard-container">
+            <section id="sustainability-tips" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-leaf"></i></div>
+                <h2>Sustainability Tips</h2>
+                <div class="tips-container" id="tips-container">
+                    <!-- Tips will be added dynamically with JavaScript -->
+                </div>
+            </section>
+
+            <section id="brand-scoreboard" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-chart-line"></i></div>
+                <h2>Brand Sustainability Scoreboard</h2>
+                <div class="table-container">
+                    <table id="scoreboard-table">
+                        <thead>
+                            <tr>
+                                <th>Brand</th>
+                                <th>Sustainability Score</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows will be added dynamically with JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section id="store-directory" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-store"></i></div>
+                <h2>Eco-Friendly Store Directory</h2>
+                <ul id="store-list">
+                    <!-- Store list items will be added dynamically with JavaScript -->
+                </ul>
+            </section>
+
+            <section id="carbon-footprint" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-seedling"></i></div>
+                <h2>Carbon Footprint Visuals</h2>
+                <div class="carbon-footprint-cards">
+                    <div class="carbon-card">
+                        <div class="carbon-label">Plastic Bag</div>
+                        <div class="carbon-bar bar-high"></div>
+                        <div class="carbon-value">100g CO₂</div>
+                    </div>
+                    <div class="carbon-card">
+                        <div class="carbon-label">Reusable Bag</div>
+                        <div class="carbon-bar bar-low"></div>
+                        <div class="carbon-value">10g CO₂</div>
+                    </div>
+                    <div class="carbon-card">
+                        <div class="carbon-label">Bulk Shopping</div>
+                        <div class="carbon-bar bar-medium"></div>
+                        <div class="carbon-value">40g CO₂</div>
+                    </div>
+                    <div class="carbon-card">
+                        <div class="carbon-label">Local Produce</div>
+                        <div class="carbon-bar bar-low"></div>
+                        <div class="carbon-value">15g CO₂</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="eco-store-locator" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-store"></i></div>
+                <h2>Eco Store Locator</h2>
+                <div class="store-grid">
+                    <div class="eco-store-card">
+                        <div class="eco-store-img"></div>
+                        <div class="eco-store-info">
+                            <div class="eco-store-name">Green Earth Market</div>
+                            <div class="eco-store-address">123 Eco Street, Greenville</div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Green+Earth+Market,+123+Eco+Street,+Greenville" target="_blank" class="eco-store-link">View on Map</a>
+                        </div>
+                    </div>
+                    <div class="eco-store-card">
+                        <div class="eco-store-img"></div>
+                        <div class="eco-store-info">
+                            <div class="eco-store-name">Sustainable Living</div>
+                            <div class="eco-store-address">456 Green Avenue, Eco City</div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Sustainable+Living,+456+Green+Avenue,+Eco+City" target="_blank" class="eco-store-link">View on Map</a>
+                        </div>
+                    </div>
+                    <div class="eco-store-card">
+                        <div class="eco-store-img"></div>
+                        <div class="eco-store-info">
+                            <div class="eco-store-name">Earth Friendly Goods</div>
+                            <div class="eco-store-address">789 Nature Road, Sustainable Town</div>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Earth+Friendly+Goods,+789+Nature+Road,+Sustainable+Town" target="_blank" class="eco-store-link">View on Map</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="green-pledge" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                <h2>Take the Green Pledge</h2>
+                <p>Commit to making more sustainable shopping choices</p>
+                <button id="pledge-button">I Pledge to Shop Sustainably</button>
+                <div id="pledge-message"></div>
+            </section>
+
+            <section id="carbon-calculator" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-balance-scale"></i></div>
+                <h2>Carbon Footprint Calculator</h2>
+                <form id="carbon-form">
+                    <label for="product-type">Select Product Type:</label>
+                    <select id="product-type">
+                        <option value="t-shirt">T-shirt</option>
+                        <option value="shoes">Shoes</option>
+                        <option value="jeans">Jeans</option>
+                        <option value="jacket">Jacket</option>
+                        <option value="bag">Bag</option>
+                    </select>
+                    <button type="submit" id="calculate-carbon">Calculate Carbon Footprint</button>
+                </form>
+                <div id="carbon-result" class="carbon-result"></div>
+            </section>
+
+            <section id="interactive-map" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <h2>Interactive Map of Sustainable Retailers</h2>
+                <div class="map-container">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/World_map_blank_without_borders.svg/1200px-World_map_blank_without_borders.svg.png" alt="Map" class="static-map">
+                    <div class="map-pin" style="top: 40%; left: 30%;" data-store="Green Earth Market"></div>
+                    <div class="map-pin" style="top: 50%; left: 50%;" data-store="Sustainable Living"></div>
+                    <div class="map-pin" style="top: 60%; left: 70%;" data-store="Earth Friendly Goods"></div>
+                    <div id="map-tooltip" class="map-tooltip"></div>
+                </div>
+            </section>
+
+            <section id="product-scanner" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-search"></i></div>
+                <h2>Product Sustainability Scanner</h2>
+                <form id="scanner-form">
+                    <input type="text" id="scanner-input" placeholder="Enter product name...">
+                    <button type="submit" id="scanner-btn">Check</button>
+                </form>
+                <div id="scanner-result" class="scanner-result"></div>
+            </section>
+
+            <section id="tips-tracker" class="dashboard-card animate-fade-in">
+                <div class="dashboard-icon"><i class="fas fa-tasks"></i></div>
+                <h2>Gamified Tips Tracker</h2>
+                <form id="tips-form">
+                    <div class="tips-checklist">
+                        <label><input type="checkbox" value="reusable-bag"> Used a reusable bag</label>
+                        <label><input type="checkbox" value="public-transport"> Used public transport</label>
+                        <label><input type="checkbox" value="local-products"> Bought local products</label>
+                        <label><input type="checkbox" value="no-plastic"> Avoided single-use plastic</label>
+                        <label><input type="checkbox" value="eco-brand"> Chose an eco-friendly brand</label>
+                    </div>
+                </form>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div id="progress-text" class="progress-text"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 GreenCart. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
