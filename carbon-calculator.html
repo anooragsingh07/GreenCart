@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCart - Carbon Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-logo"><span class="logo-green">Green</span><span class="logo-cart">Cart</span></div>
+        <ul class="navbar-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="carbon-calculator.html" class="active">Carbon Calculator</a></li>
+            <li><a href="interactive-map.html">Map</a></li>
+            <li><a href="product-scanner.html">Scanner</a></li>
+            <li><a href="tips-tracker.html">Tips Tracker</a></li>
+        </ul>
+    </nav>
+    <main class="feature-main">
+        <section class="feature-section">
+            <div class="dashboard-icon"><i class="fas fa-balance-scale"></i></div>
+            <h1>Carbon Footprint Calculator</h1>
+            <form id="carbon-form">
+                <label for="product-type">Select Product Type:</label>
+                <select id="product-type">
+                    <option value="t-shirt">T-shirt</option>
+                    <option value="shoes">Shoes</option>
+                    <option value="jeans">Jeans</option>
+                    <option value="jacket">Jacket</option>
+                    <option value="bag">Bag</option>
+                </select>
+                <button type="submit" id="calculate-carbon">Calculate Carbon Footprint</button>
+            </form>
+            <div id="carbon-result" class="carbon-result"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html> 

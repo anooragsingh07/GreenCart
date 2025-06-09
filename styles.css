@@ -644,6 +644,11 @@ html {
     align-items: center;
     margin-bottom: 1rem;
     flex: 1 1 220px;
+    text-align: center;
+}
+
+.eco-store-info {
+    text-align: center;
 }
 
 .eco-store-img {
@@ -673,6 +678,7 @@ html {
     font-weight: 600;
     font-size: 1rem;
     transition: color 0.2s;
+    text-align: center;
 }
 .eco-store-link:hover {
     color: var(--accent-green);
@@ -688,4 +694,195 @@ html {
         min-width: 0;
         max-width: 100%;
     }
+}
+
+.features-row {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.feature-horizontal {
+    width: 100vw;
+    max-width: none;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #232b4a;
+    border-radius: 24px;
+    box-shadow: 0 8px 40px rgba(0,113,220,0.10), 0 2px 12px rgba(67,160,71,0.10);
+    padding: 3rem 6vw;
+    min-height: 350px;
+    color: var(--white);
+    gap: 2rem;
+}
+.feature-left {
+    flex: 0 0 220px;
+    min-width: 180px;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    height: 100%;
+}
+.feature-left .dashboard-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+}
+.feature-left h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    line-height: 1.2;
+    max-width: 220px;
+    word-break: break-word;
+}
+.feature-right {
+    flex: 1 1 0;
+    min-width: 220px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    height: 100%;
+}
+.feature-right form, .feature-right .map-container, .feature-right .tips-checklist {
+    width: 100%;
+}
+
+/* Modern form elements for dark UI */
+.feature-right label {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: var(--white);
+}
+.feature-right input[type="text"],
+.feature-right select {
+    background: #181f36;
+    color: var(--white);
+    border: 1.5px solid #3a4a6a;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-size: 1.1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+.feature-right input[type="text"]:focus,
+.feature-right select:focus {
+    border: 1.5px solid var(--accent-green);
+}
+.feature-right button {
+    background: var(--accent-orange);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.3rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.2s;
+}
+.feature-right button:hover {
+    background: var(--accent-green);
+}
+.feature-right form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Map styling */
+.map-container {
+    position: relative;
+    min-width: 350px;
+    min-height: 220px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.static-map {
+    width: 100%;
+    height: auto;
+    min-width: 320px;
+    min-height: 180px;
+    max-width: 480px;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(10,17,36,0.13);
+    background: #181f36;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+}
+
+/* Center feature-right content */
+.feature-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.2rem;
+}
+@media (max-width: 900px) {
+    .feature-right {
+        align-items: center;
+    }
+    .feature-right form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .feature-horizontal {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100vw;
+        max-width: none;
+        min-width: 0;
+        padding: 2rem 2vw;
+    }
+    .feature-left, .feature-right {
+        min-width: 0;
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    .feature-left .dashboard-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+    .feature-left h2 {
+        font-size: 1.1rem;
+        text-align: center;
+        max-width: 100%;
+    }
+}
+
+.scanner-suggestions {
+    font-size: 1rem;
+    color: #b0b8d1;
+    margin-bottom: 0.7rem;
+    margin-top: -0.5rem;
+    line-height: 1.5;
+    word-break: break-word;
 } 

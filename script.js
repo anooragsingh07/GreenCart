@@ -102,8 +102,23 @@ const productData = [
     { name: 'shoes', score: 5, rating: 'Medium', rec: 'Consider recycled materials.' },
     { name: 'jeans', score: 4, rating: 'Medium', rec: 'Look for organic cotton.' },
     { name: 'jacket', score: 3, rating: 'Low', rec: 'Try second-hand or eco brands.' },
-    { name: 'bag', score: 7, rating: 'High', rec: 'Reusable bags are best.' }
+    { name: 'bag', score: 7, rating: 'High', rec: 'Reusable bags are best.' },
+    { name: 'levis', score: 6, rating: 'Medium', rec: 'Levi\'s is improving sustainability. Prefer their Water<Less or Wellthread lines.' },
+    { name: 'adidas', score: 7, rating: 'High', rec: 'Adidas uses recycled materials and has eco-friendly lines.' },
+    { name: 'nike', score: 5, rating: 'Medium', rec: 'Nike is making progress, but look for their sustainable collections.' },
+    { name: 'patagonia', score: 9, rating: 'High', rec: 'Patagonia is a leader in sustainable outdoor wear.' },
+    { name: 'h&m', score: 4, rating: 'Medium', rec: 'H&M has a Conscious line, but fast fashion is less sustainable.' },
+    { name: 'zara', score: 3, rating: 'Low', rec: 'Zara is working on sustainability, but fast fashion is less eco-friendly.' },
+    { name: 'allbirds', score: 8, rating: 'High', rec: 'Allbirds uses natural and recycled materials.' },
+    { name: 'tentree', score: 9, rating: 'High', rec: 'Tentree plants trees for every purchase and uses eco materials.' },
+    { name: 'eileen fisher', score: 8, rating: 'High', rec: 'Eileen Fisher is known for ethical and sustainable practices.' },
+    { name: 'forever 21', score: 2, rating: 'Low', rec: 'Fast fashion, not recommended for sustainability.' }
 ];
+// Render suggestions
+const scannerSuggestions = document.getElementById('scanner-suggestions');
+if (scannerSuggestions) {
+    scannerSuggestions.innerHTML = '<strong>Try searching:</strong> ' + productData.map(p => p.name.charAt(0).toUpperCase() + p.name.slice(1)).join(', ');
+}
 const scannerForm = document.getElementById('scanner-form');
 const scannerResult = document.getElementById('scanner-result');
 if (scannerForm) {

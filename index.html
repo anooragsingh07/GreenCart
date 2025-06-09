@@ -97,9 +97,12 @@
                 </div>
             </section>
 
-            <section id="eco-store-locator" class="dashboard-card animate-fade-in">
+            <section id="eco-store-locator" class="dashboard-card">
                 <div class="dashboard-icon"><i class="fas fa-store"></i></div>
                 <h2>Eco Store Locator</h2>
+                <div class="eco-map-container" style="text-align:center; margin-bottom:1.5rem;">
+                    <iframe class="static-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24156.69062784713!2d-74.0060152!3d40.7127281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQyJzQ1LjgiTiA3NMKwMDAnMjIuNSJX!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" width="100%" height="220" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
                 <div class="store-grid">
                     <div class="eco-store-card">
                         <div class="eco-store-img"></div>
@@ -136,62 +139,78 @@
                 <div id="pledge-message"></div>
             </section>
 
-            <section id="carbon-calculator" class="dashboard-card animate-fade-in">
-                <div class="dashboard-icon"><i class="fas fa-balance-scale"></i></div>
-                <h2>Carbon Footprint Calculator</h2>
-                <form id="carbon-form">
-                    <label for="product-type">Select Product Type:</label>
-                    <select id="product-type">
-                        <option value="t-shirt">T-shirt</option>
-                        <option value="shoes">Shoes</option>
-                        <option value="jeans">Jeans</option>
-                        <option value="jacket">Jacket</option>
-                        <option value="bag">Bag</option>
-                    </select>
-                    <button type="submit" id="calculate-carbon">Calculate Carbon Footprint</button>
-                </form>
-                <div id="carbon-result" class="carbon-result"></div>
-            </section>
-
-            <section id="interactive-map" class="dashboard-card animate-fade-in">
-                <div class="dashboard-icon"><i class="fas fa-map-marked-alt"></i></div>
-                <h2>Interactive Map of Sustainable Retailers</h2>
-                <div class="map-container">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/World_map_blank_without_borders.svg/1200px-World_map_blank_without_borders.svg.png" alt="Map" class="static-map">
-                    <div class="map-pin" style="top: 40%; left: 30%;" data-store="Green Earth Market"></div>
-                    <div class="map-pin" style="top: 50%; left: 50%;" data-store="Sustainable Living"></div>
-                    <div class="map-pin" style="top: 60%; left: 70%;" data-store="Earth Friendly Goods"></div>
-                    <div id="map-tooltip" class="map-tooltip"></div>
+            <div class="features-row">
+            <section id="carbon-calculator" class="feature-horizontal">
+                <div class="feature-left">
+                    <div class="dashboard-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h2>Carbon Footprint Calculator</h2>
+                </div>
+                <div class="feature-right">
+                    <form id="carbon-form">
+                        <label for="product-type">Select Product Type:</label>
+                        <select id="product-type">
+                            <option value="t-shirt">T-shirt</option>
+                            <option value="shoes">Shoes</option>
+                            <option value="jeans">Jeans</option>
+                            <option value="jacket">Jacket</option>
+                            <option value="bag">Bag</option>
+                        </select>
+                        <button type="submit" id="calculate-carbon">Calculate Carbon Footprint</button>
+                    </form>
+                    <div id="carbon-result" class="carbon-result"></div>
                 </div>
             </section>
 
-            <section id="product-scanner" class="dashboard-card animate-fade-in">
-                <div class="dashboard-icon"><i class="fas fa-search"></i></div>
-                <h2>Product Sustainability Scanner</h2>
-                <form id="scanner-form">
-                    <input type="text" id="scanner-input" placeholder="Enter product name...">
-                    <button type="submit" id="scanner-btn">Check</button>
-                </form>
-                <div id="scanner-result" class="scanner-result"></div>
-            </section>
-
-            <section id="tips-tracker" class="dashboard-card animate-fade-in">
-                <div class="dashboard-icon"><i class="fas fa-tasks"></i></div>
-                <h2>Gamified Tips Tracker</h2>
-                <form id="tips-form">
-                    <div class="tips-checklist">
-                        <label><input type="checkbox" value="reusable-bag"> Used a reusable bag</label>
-                        <label><input type="checkbox" value="public-transport"> Used public transport</label>
-                        <label><input type="checkbox" value="local-products"> Bought local products</label>
-                        <label><input type="checkbox" value="no-plastic"> Avoided single-use plastic</label>
-                        <label><input type="checkbox" value="eco-brand"> Chose an eco-friendly brand</label>
+            <section id="interactive-map" class="feature-horizontal">
+                <div class="feature-left">
+                    <div class="dashboard-icon"><i class="fas fa-map-marked-alt"></i></div>
+                    <h2>Interactive Map of Sustainable Retailers</h2>
+                </div>
+                <div class="feature-right">
+                    <div class="map-container">
+                        <iframe class="static-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24156.69062784713!2d-74.0060152!3d40.7127281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDQyJzQ1LjgiTiA3NMKwMDAnMjIuNSJX!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus" width="100%" height="300" style="border:0; border-radius:16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div id="map-tooltip" class="map-tooltip"></div>
                     </div>
-                </form>
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="progress-bar"></div>
                 </div>
-                <div id="progress-text" class="progress-text"></div>
             </section>
+
+            <section id="product-scanner" class="feature-horizontal">
+                <div class="feature-left">
+                    <div class="dashboard-icon"><i class="fas fa-search"></i></div>
+                    <h2>Product Sustainability Scanner</h2>
+                </div>
+                <div class="feature-right">
+                    <form id="scanner-form">
+                        <input type="text" id="scanner-input" placeholder="Enter product name...">
+                        <button type="submit" id="scanner-btn">Check</button>
+                    </form>
+                    <div id="scanner-suggestions" class="scanner-suggestions"></div>
+                    <div id="scanner-result" class="scanner-result"></div>
+                </div>
+            </section>
+
+            <section id="tips-tracker" class="feature-horizontal">
+                <div class="feature-left">
+                    <div class="dashboard-icon"><i class="fas fa-tasks"></i></div>
+                    <h2>Gamified Tips Tracker</h2>
+                </div>
+                <div class="feature-right">
+                    <form id="tips-form">
+                        <div class="tips-checklist">
+                            <label><input type="checkbox" value="reusable-bag"> Used a reusable bag</label>
+                            <label><input type="checkbox" value="public-transport"> Used public transport</label>
+                            <label><input type="checkbox" value="local-products"> Bought local products</label>
+                            <label><input type="checkbox" value="no-plastic"> Avoided single-use plastic</label>
+                            <label><input type="checkbox" value="eco-brand"> Chose an eco-friendly brand</label>
+                        </div>
+                    </form>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                    <div id="progress-text" class="progress-text"></div>
+                </div>
+            </section>
+            </div>
         </div>
     </main>
 
