@@ -276,19 +276,34 @@ function setupPledgeButton() {
     const pledgeButton = document.getElementById('pledge-button');
     const pledgeMessage = document.getElementById('pledge-message');
     if (!pledgeButton || !pledgeMessage) return;
-    // Check if user has already pledged (using localStorage)
-    if (localStorage.getItem('hasPledged') === 'true') {
-        pledgeButton.disabled = true;
-        pledgeButton.textContent = 'Pledge Completed';
-        pledgeMessage.textContent = 'Thank you for your commitment to sustainable shopping!';
-        pledgeMessage.style.display = 'block';
-    }
+    // Remove any previous animation
+    let animationDiv = document.getElementById('pledge-animation');
+    if (animationDiv) animationDiv.remove();
+    pledgeButton.disabled = false;
+    pledgeButton.textContent = 'I Pledge to Shop Sustainably';
+    pledgeMessage.textContent = '';
+    pledgeMessage.style.display = 'none';
     pledgeButton.addEventListener('click', () => {
+        // Animation: checkmark with fade-out
+        animationDiv = document.createElement('div');
+        animationDiv.id = 'pledge-animation';
+        animationDiv.innerHTML = `<svg width="60" height="60" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#43a047" opacity="0.15"/><polyline points="18,32 27,41 43,23" style="fill:none;stroke:#43a047;stroke-width:5;stroke-linecap:round;stroke-linejoin:round"/></svg>`;
+        animationDiv.style.position = 'absolute';
+        animationDiv.style.left = '50%';
+        animationDiv.style.top = '50%';
+        animationDiv.style.transform = 'translate(-50%, -50%)';
+        animationDiv.style.zIndex = '10';
+        animationDiv.style.opacity = '1';
+        animationDiv.style.transition = 'opacity 0.7s';
+        pledgeButton.parentElement.appendChild(animationDiv);
+        setTimeout(() => {
+            animationDiv.style.opacity = '0';
+            setTimeout(() => { animationDiv.remove(); }, 700);
+        }, 1200);
         pledgeButton.disabled = true;
         pledgeButton.textContent = 'Pledge Completed';
         pledgeMessage.textContent = 'Thank you for your commitment to sustainable shopping!';
         pledgeMessage.style.display = 'block';
-        localStorage.setItem('hasPledged', 'true');
     });
 }
 

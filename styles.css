@@ -220,6 +220,8 @@ tr:nth-child(odd) {
     color: var(--white) !important;
     border: none;
     box-shadow: 0 2px 8px rgba(10,17,36,0.10);
+    position: relative;
+    min-height: 320px;
 }
 
 #pledge-button {
