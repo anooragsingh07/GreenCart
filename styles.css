@@ -820,16 +820,12 @@ html {
     align-items: center;
 }
 .static-map {
-    width: 100%;
-    height: auto;
-    min-width: 320px;
-    min-height: 180px;
-    max-width: 480px;
-    border-radius: 16px;
-    box-shadow: 0 2px 12px rgba(10,17,36,0.13);
-    background: #181f36;
+    width: 100px;
+    height: 60px;
+    border-radius: 8px;
     display: block;
-    margin: 0 auto 1.5rem auto;
+    object-fit: cover;
+    margin: 0 auto;
 }
 
 /* Center feature-right content */
@@ -896,4 +892,20 @@ html {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.eco-map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+.static-map {
+    width: 100px;
+    height: 60px;
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
 } 
