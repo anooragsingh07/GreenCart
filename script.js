@@ -275,23 +275,19 @@ function createCarbonFootprintVisual() {
 function setupPledgeButton() {
     const pledgeButton = document.getElementById('pledge-button');
     const pledgeMessage = document.getElementById('pledge-message');
-    
+    if (!pledgeButton || !pledgeMessage) return;
     // Check if user has already pledged (using localStorage)
     if (localStorage.getItem('hasPledged') === 'true') {
         pledgeButton.disabled = true;
         pledgeButton.textContent = 'Pledge Completed';
         pledgeMessage.textContent = 'Thank you for your commitment to sustainable shopping!';
+        pledgeMessage.style.display = 'block';
     }
-    
     pledgeButton.addEventListener('click', () => {
-        // Disable the button
         pledgeButton.disabled = true;
         pledgeButton.textContent = 'Pledge Completed';
-        
-        // Show thank you message
         pledgeMessage.textContent = 'Thank you for your commitment to sustainable shopping!';
-        
-        // Save to localStorage
+        pledgeMessage.style.display = 'block';
         localStorage.setItem('hasPledged', 'true');
     });
 }
