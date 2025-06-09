@@ -44,6 +44,13 @@ The website is fully responsive and works well on:
 - Include a map view for locating eco-friendly stores
 - Add a feature to compare products based on their environmental impact
 
+## Contributing
+
+Contributions are welcome! Please fork this repository and open a pull request with your improvements.
+
+For major changes, please open an issue first to discuss what you'd like to change.
+
+
 ## License
 
 This project is open source and available under the [MIT License](LICENSE).
