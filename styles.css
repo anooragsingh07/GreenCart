@@ -885,4 +885,15 @@ html {
     margin-top: -0.5rem;
     line-height: 1.5;
     word-break: break-word;
+}
+
+.mini-map {
+    width: 100px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 } 
