@@ -1,4 +1,3 @@
-console.log('script.js loaded!');
 // Data for sustainability tips
 const sustainabilityTips = [
     "Choose products with minimal packaging to reduce waste.",
@@ -275,10 +274,40 @@ function createCarbonFootprintVisual() {
 // Function to handle the green pledge button
 function setupPledgeButton() {
     const pledgeButton = document.getElementById('pledge-button');
-    if (!pledgeButton) return;
-    pledgeButton.onclick = function() {
-        alert('Minimal test: Button works!');
-    };
+    const pledgeMessage = document.getElementById('pledge-message');
+    if (!pledgeButton || !pledgeMessage) return;
+
+    // Remove any previous tick
+    let oldTick = document.getElementById('pledge-tick');
+    if (oldTick) oldTick.remove();
+
+    pledgeButton.disabled = false;
+    pledgeButton.textContent = 'I Pledge to Shop Sustainably';
+    pledgeMessage.textContent = '';
+    pledgeMessage.style.display = 'none';
+
+    // Remove any previous click event
+    pledgeButton.onclick = null;
+
+    pledgeButton.addEventListener('click', function () {
+        // Remove any previous tick
+        let oldTick = document.getElementById('pledge-tick');
+        if (oldTick) oldTick.remove();
+
+        // Create a tick SVG under the button
+        let tickDiv = document.createElement('div');
+        tickDiv.id = 'pledge-tick';
+        tickDiv.style.display = 'flex';
+        tickDiv.style.justifyContent = 'center';
+        tickDiv.style.margin = '1rem 0 0.5rem 0';
+        tickDiv.innerHTML = `<svg width="40" height="40" viewBox="0 0 60 60"><circle cx="30" cy="30" r="28" fill="#43a047" opacity="0.15"/><polyline points="18,32 27,41 43,23" style="fill:none;stroke:#43a047;stroke-width:5;stroke-linecap:round;stroke-linejoin:round"/></svg>`;
+        // Insert tick after the button, before the message
+        pledgeButton.parentElement.insertBefore(tickDiv, pledgeMessage);
+        pledgeButton.disabled = true;
+        pledgeButton.textContent = 'Pledge Completed';
+        pledgeMessage.textContent = 'Thank you for your commitment to sustainable shopping!';
+        pledgeMessage.style.display = 'block';
+    });
 }
 
 // Smooth scroll for navbar and hero buttons

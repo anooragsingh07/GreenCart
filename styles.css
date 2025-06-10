@@ -598,6 +598,7 @@ html {
     color: var(--white);
     font-size: 1rem;
     flex: 1 1 140px;
+    justify-content: center;
 }
 
 .carbon-label {
@@ -608,20 +609,27 @@ html {
 }
 
 .carbon-bar {
-    width: 60px;
-    border-radius: 8px;
-    background: var(--accent-green);
+    width: 40px;
+    border-radius: 16px 16px 8px 8px;
+    background: linear-gradient(180deg, #43a047 60%, #b2ff59 100%);
     margin-bottom: 1rem;
+    box-shadow: 0 4px 16px rgba(67,160,71,0.18);
+    transition: height 1s cubic-bezier(.23,1.01,.32,1);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
 }
 .bar-high { height: 140px; }
 .bar-medium { height: 90px; }
 .bar-low { height: 40px; }
-
 .carbon-value {
     font-size: 1rem;
     font-weight: 600;
     color: var(--accent-green);
-    margin-top: auto;
+    margin-top: 0.5rem;
+    text-align: center;
+    width: 100%;
 }
 
 .store-grid {
