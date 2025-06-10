@@ -276,14 +276,13 @@ function setupPledgeButton() {
     const pledgeButton = document.getElementById('pledge-button');
     const pledgeMessage = document.getElementById('pledge-message');
     if (!pledgeButton || !pledgeMessage) return;
-    // Remove any previous animation
     let animationDiv = document.getElementById('pledge-animation');
     if (animationDiv) animationDiv.remove();
     pledgeButton.disabled = false;
     pledgeButton.textContent = 'I Pledge to Shop Sustainably';
     pledgeMessage.textContent = '';
     pledgeMessage.style.display = 'none';
-    pledgeButton.addEventListener('click', () => {
+    pledgeButton.onclick = function() {
         // Animation: checkmark with fade-out
         animationDiv = document.createElement('div');
         animationDiv.id = 'pledge-animation';
@@ -295,7 +294,7 @@ function setupPledgeButton() {
         animationDiv.style.zIndex = '10';
         animationDiv.style.opacity = '1';
         animationDiv.style.transition = 'opacity 0.7s';
-        pledgeButton.parentElement.appendChild(animationDiv);
+        document.querySelector('.pledge-btn-container').appendChild(animationDiv);
         setTimeout(() => {
             animationDiv.style.opacity = '0';
             setTimeout(() => { animationDiv.remove(); }, 700);
@@ -304,7 +303,7 @@ function setupPledgeButton() {
         pledgeButton.textContent = 'Pledge Completed';
         pledgeMessage.textContent = 'Thank you for your commitment to sustainable shopping!';
         pledgeMessage.style.display = 'block';
-    });
+    };
 }
 
 // Smooth scroll for navbar and hero buttons
